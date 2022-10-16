@@ -69,5 +69,5 @@ jobs:
         run: |
           cd src
           npm run clean
-          npm run generate
+          npm run build
           npm run deploy
