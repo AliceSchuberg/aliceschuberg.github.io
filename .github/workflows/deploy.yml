@@ -65,6 +65,7 @@ jobs:
         run: |
           cd src
           npm install
+          npm i hexo-renderer-swig
 
       - name: Deploy hexo
         run: |
