@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node_version: [16.18.0]
+        node_version: [12.16.2]
 
     steps:
       - name: Checkout
