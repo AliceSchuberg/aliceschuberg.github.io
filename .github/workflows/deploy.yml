@@ -23,8 +23,10 @@ jobs:
         node_version: [16.18.0]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Checkout files
+        uses: Bhacaz/checkout-files@v2
+        with:
+          files: src/
 
       - name: Checkout theme repo
         uses: actions/checkout@v2
