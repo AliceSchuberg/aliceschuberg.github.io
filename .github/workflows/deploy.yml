@@ -26,7 +26,7 @@ jobs:
       - name: Checkout files
         uses: Bhacaz/checkout-files@v2
         with:
-          files: src/
+          files: src
 
       - name: Checkout theme repo
         uses: actions/checkout@v2
