@@ -35,14 +35,14 @@ jobs:
         with:
           repository: ${{ env.THEME_REPO }}
           ref: ${{ env.THEME_BRANCH }}
-          path: themes/next
+          path: src/themes/next
 
       - name: Checkout deploy repo
         uses: actions/checkout@v2
         with:
           repository: ${{ env.DEPLOY_REPO }}
           ref: ${{ env.DEPLOY_BRANCH }}
-          path: .deploy_git
+          path: src/.deploy_git
 
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v1
