@@ -66,6 +66,7 @@ jobs:
           cd src
           npm install
           npm i nunjucks
+          npm i hexo-renderer-swig
 
       - name: Deploy hexo
         run: |
