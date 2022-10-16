@@ -51,7 +51,7 @@ jobs:
 
       - name: Configuration environment
         env:
-          HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
+          ALICE_IO_DEPLOY_PK: ${{secrets.ALICE_IO_DEPLOY_PK}}
         run: |
           sudo timedatectl set-timezone "America/New_York"
           mkdir -p ~/.ssh/
