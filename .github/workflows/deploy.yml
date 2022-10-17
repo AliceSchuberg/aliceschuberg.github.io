@@ -53,7 +53,7 @@ jobs:
         env:
           ALICE_IO_DEPLOY_PK: ${{secrets.ALICE_IO_DEPLOY_PK}}
         run: |
-          sudo timedatectl set-timezone "America/New_York"
+#          sudo timedatectl set-timezone "America/New_York"
           mkdir -p ~/.ssh/
           echo "$ALICE_IO_DEPLOY_PK" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
