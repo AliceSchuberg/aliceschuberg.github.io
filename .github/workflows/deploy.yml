@@ -16,10 +16,10 @@ env:
 jobs:
   build:
     name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: macos-latest #windows-latest /  macos-latest
+    runs-on: ubuntu-latest #windows-latest /  macos-latest
     strategy:
       matrix:
-        os: [macos-latest]
+        os: [ubuntu-latest]
         node_version: [16.17.1]
 
     steps:
