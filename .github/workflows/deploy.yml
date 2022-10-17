@@ -35,7 +35,7 @@ jobs:
         with:
           repository: ${{ env.THEME_REPO }}
           ref: ${{ env.THEME_BRANCH }}
-          path: src/themes/next
+          path: src/themes/next/
 
 #      - name: Checkout deploy repo
 #        uses: actions/checkout@v2
@@ -65,7 +65,7 @@ jobs:
         run: |
           cd src
           npm install
-          npm i nunjucks
+#          npm i nunjucks
           npm i hexo-renderer-swig
 
       - name: Deploy hexo
