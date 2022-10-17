@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node_version: [12.16.2]
+        node_version: [16.17.1]
 
     steps:
       - name: Checkout
@@ -37,12 +37,12 @@ jobs:
           ref: ${{ env.THEME_BRANCH }}
           path: src/themes/next
 
-#      - name: Checkout deploy repo
-#        uses: actions/checkout@v2
-#        with:
-#          repository: ${{ env.DEPLOY_REPO }}
-#          ref: ${{ env.DEPLOY_BRANCH }}
-#          path: src/.deploy_git
+      - name: Checkout deploy repo
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.DEPLOY_REPO }}
+          ref: ${{ env.DEPLOY_BRANCH }}
+          path: src/.deploy_git
 
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v1
