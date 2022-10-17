@@ -25,7 +25,7 @@ class Solution {
 }
 ```
 
-###Ideas:
+### Ideas:
 ````
 1. Consider two extreme cases, [0,0,0,0,0,0,1,0] and [0,1,0,0,0,0,0,0]
 2. We will not know if min/starting point is on the left or right side
