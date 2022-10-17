@@ -16,10 +16,10 @@ env:
 jobs:
   build:
     name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: ubuntu-latest #windows-latest /  macos-latest
+    runs-on: macos-latest #windows-latest /  macos-latest
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [macos-latest]
         node_version: [16.17.1]
 
     steps:
@@ -35,7 +35,7 @@ jobs:
         with:
           repository: ${{ env.THEME_REPO }}
           ref: ${{ env.THEME_BRANCH }}
-          path: src/themes/next/
+          path: src/themes/next
 
 #      - name: Checkout deploy repo
 #        uses: actions/checkout@v2
@@ -53,7 +53,7 @@ jobs:
         env:
           ALICE_IO_DEPLOY_PK: ${{secrets.ALICE_IO_DEPLOY_PK}}
         run: |
-          sudo timedatectl set-timezone "America/New_York"
+#          sudo timedatectl set-timezone "America/New_York"
           mkdir -p ~/.ssh/
           echo "$ALICE_IO_DEPLOY_PK" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
@@ -65,7 +65,7 @@ jobs:
         run: |
           cd src
           npm install
-#          npm i nunjucks
+          npm i nunjucks
           npm i hexo-renderer-swig
 
       - name: Deploy hexo
