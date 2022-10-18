@@ -8,7 +8,7 @@ on:
 env:
   GIT_USER: AliceSchuberg
   GIT_EMAIL: 49569035+AliceSchuberg@users.noreply.github.com
-  THEME_REPO: iissnan/hexo-theme-next
+  THEME_REPO: next-theme/hexo-theme-next
   THEME_BRANCH: master
   DEPLOY_REPO: AliceSchuberg/aliceschuberg.github.io
   DEPLOY_BRANCH: release
