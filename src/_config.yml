@@ -107,5 +107,5 @@ deploy:
   branch: [release]
 
 theme_config:
-  darkmode: true
   scheme: Gemini
+  darkmode: true
