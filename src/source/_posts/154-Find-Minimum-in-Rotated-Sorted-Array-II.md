@@ -32,5 +32,5 @@ class Solution {
 3. In both cases, we need right to decrease in order to truncate the right part of the array
     a. why not increase from left side
        -> the condition imply one case that will fall into the else clause
-       -> nums[left] <= nums[left] <= nums[right] which is sorted array
+       -> nums[left] <= nums[mid] <= nums[right] which is sorted array
        then it needs to consider this case as well and decrease right would be safe option to do
